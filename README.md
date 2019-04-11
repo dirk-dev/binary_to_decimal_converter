@@ -1,6 +1,8 @@
 # Binary to Decimal Converter
 A simple app that converts binary numbers to decimals
 
+## [Deployed app](https://dirk-kiesewetter.github.io/binary_to_decimal_converter/)
+
 ![Binary to decimal converter app](images/binary_to_decimal_converter_ss.png)
 
 ## About the Binary to Decimal converter:

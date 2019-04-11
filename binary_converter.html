@@ -18,9 +18,11 @@
     <div class="card" style="width: 35rem;">
         <h1>Binary to Decimal converter</h1>
         <h5>Please enter a binary number (0/1s only)</h5>
+        <h6>Up to 16 digits</h6>
+        <br>
         Binary number:
-        <form> <input type="number" id="binaryNum" required><br><input type="submit" value="Submit"
-                id="binarySubmit" class="btn btn-primary"></form>
+        <form> <input type="text" id="binaryNum" maxlength='16' required><br><input type="submit"
+                value="Submit" id="binarySubmit" class="btn btn-primary"></form>
         Decimal number:
         <div id="decimalNum"></div>
     </div>

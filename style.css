@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+#binarySubmit {
+    width: 150px;
+    margin: 25px 0;
+}
+
+.card {
+    padding:25px;
+    margin: 15px;
+    background-color: rgb(188, 253, 231);
+}
+
+#decimalNum {
+width: 178px;
+height: 30px;
+border-style: solid;
+border-width: 1px;
+background-color: white;
+}

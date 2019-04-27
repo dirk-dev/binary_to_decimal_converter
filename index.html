@@ -11,7 +11,7 @@
         crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
 
-    <title>Binary to Decimal converter</title>
+    <title>Binary to Decimal/Decimal to Binary converter</title>
 </head>
 
 <body>
@@ -25,6 +25,17 @@
                 value="Submit" id="binarySubmit" class="btn btn-primary"></form>
         Decimal number:
         <div id="decimalNum"></div>
+    </div>
+    <div class="card" style="width: 35rem;">
+        <h1>Decimal to Binary converter</h1>
+        <h5>Please enter a decimal number</h5>
+        <h6>Up to 16 digits</h6>
+        <br>
+        Decimal number:
+        <form> <input type="text" id="binaryNum" maxlength='16' required><br><input type="submit"
+                value="Submit" id="decimalSubmit" class="btn btn-primary"></form>
+        Binary number:
+        <div id="binary"></div>
     </div>
 
 

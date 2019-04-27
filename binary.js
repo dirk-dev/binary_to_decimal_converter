@@ -1,6 +1,11 @@
 const submitButtonBinary = document.querySelector('#binarySubmit')
 const submitButtonDecimal = document.querySelector('#decimalSubmit')
 
+let inputMessage = document.querySelector('#binaryInput')
+inputMessage.onfocus = () => {
+  inputMessage.value = ''
+}
+
 submitButtonBinary.onclick = () => {
   event.preventDefault()
   let binaryInput = document.querySelector('#binaryInput').value
@@ -20,15 +25,20 @@ submitButtonBinary.onclick = () => {
     }
     document.querySelector('#decimalNum').innerHTML = decimalNumber
   } else if (!binaryInput) {
-    alert('The input is empty. Please enter a binary number.')
+    document.querySelector('#binaryInput').value = 'Please enter a number.'
   } else {
-    alert('Please enter binary digits only.')
+    document.querySelector('#binaryInput').value = 'Binary digits only.'
   }
 }
 
 submitButtonDecimal.onclick = () => {
   event.preventDefault()
   let decimalInput = document.querySelector('#decimalInput').value
-  const decimalRegEx = /^[0-9]{1,}$/
-  console.log(decimalInput)
+  const decimalRegex = /^[0-9]{1,}$/
+  if (decimalRegex.test(decimalInput)) {
+  } else if (!decimalInput) {
+    alert('The input is empty. Please enter a decimal number.')
+  } else {
+    alert('Please enter decimal digits only (0-9).')
+  }
 }

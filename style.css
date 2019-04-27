@@ -2,9 +2,18 @@
     box-sizing: border-box;
 }
 
-#binarySubmit {
+#binarySubmit, #decimalSubmit {
     width: 150px;
     margin: 25px 0;
+}
+
+#decimalSubmit {
+    background-color: rgb(141, 108, 24);
+    border: rgb(148, 108, 24);
+}
+
+#decimalSubmit:hover {
+    background-color:darkgoldenrod;
 }
 
 .card {
@@ -13,11 +22,11 @@
     background-color: rgb(227, 245, 245);
 }
 
-#binaryNum {
-    width: 178px;
+#binary-card {
+    background-color: lightgoldenrodyellow;
 }
 
-#decimalNum {
+#decimalNum, #binaryNum {
 width: 178px;
 height: 30px;
 border-style: solid;

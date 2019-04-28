@@ -33,11 +33,14 @@ submitButtonBinary.onclick = () => {
     }
     document.querySelector('#decimalNum').innerHTML = decimalNumber
   } else if (!binaryInput) {
-    document.querySelector('#binaryInput').classList.add('inputError')
-    document.querySelector('#binaryInput').value = 'Please enter a number.'
+    // user input errors
+    const querySelect = document.querySelector('#binaryInput')
+    querySelect.classList.add('inputError')
+    querySelect.value = 'Please enter a number.'
   } else {
-    document.querySelector('#binaryInput').classList.add('inputError')
-    document.querySelector('#binaryInput').value = 'Binary digits only.'
+    const querySelect = document.querySelector('#binaryInput')
+    querySelect.classList.add('inputError')
+    querySelect.value = 'Binary digits only.'
   }
 }
 
@@ -47,10 +50,12 @@ submitButtonDecimal.onclick = () => {
   const decimalRegex = /^[0-9]{1,}$/
   if (decimalRegex.test(decimalInput)) {
   } else if (!decimalInput) {
-    document.querySelector('#decimalInput').classList.add('inputError')
-    document.querySelector('#decimalInput').value = 'Please enter a number.'
+    const querySelect = document.querySelector('#decimalInput')
+    querySelect.classList.add('inputError')
+    querySelect.value = 'Please enter a number.'
   } else {
-    document.querySelector('#decimalInput').classList.add('inputError')
-    document.querySelector('#decimalInput').value = 'Please enter digits only.'
+    const querySelect = document.querySelector('#decimalInput')
+    querySelect.classList.add('inputError')
+    querySelect.value = 'Please enter digits only.'
   }
 }

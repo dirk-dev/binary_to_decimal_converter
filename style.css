@@ -2,6 +2,16 @@
     box-sizing: border-box;
 }
 
+.card {
+    padding:25px;
+    margin: 15px;
+    background-color: rgb(227, 245, 245);
+}
+
+#binary-card {
+    background-color: lightgoldenrodyellow;
+}
+
 #binarySubmit, #decimalSubmit {
     width: 150px;
     margin: 25px 0;
@@ -14,16 +24,6 @@
 
 #decimalSubmit:hover {
     background-color:darkgoldenrod;
-}
-
-.card {
-    padding:25px;
-    margin: 15px;
-    background-color: rgb(227, 245, 245);
-}
-
-#binary-card {
-    background-color: lightgoldenrodyellow;
 }
 
 #decimalNum, #binaryNum {
@@ -39,4 +39,5 @@ padding: 0 2px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 color: red;
 font-weight: bold;
+background-color: rgb(245, 229, 229);
 }

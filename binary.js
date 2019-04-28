@@ -24,6 +24,7 @@ submitButtonBinary.onclick = () => {
     let decimalNumber = 0
     let numberMultiplier = 1
     // loop starts at rightmost digit and iterates leftwards
+    // to evaluate lowest binary digit value first
     for (let i = binaryInput.length - 1; i >= 0; i--) {
       if (binaryInput.charAt(i) == 1) {
         decimalNumber = decimalNumber + numberMultiplier
@@ -49,6 +50,36 @@ submitButtonDecimal.onclick = () => {
   let decimalInput = document.querySelector('#decimalInput').value
   const decimalRegex = /^[0-9]{1,}$/
   if (decimalRegex.test(decimalInput)) {
+    // array of values for wach binary digit
+    const binaryArray = [
+      32768,
+      16384,
+      8192,
+      4096,
+      2048,
+      1024,
+      512,
+      256,
+      128,
+      64,
+      32,
+      16,
+      8,
+      4,
+      2,
+      1
+    ]
+    let binaryNumber = ''
+
+    for (let i = 0; (len = binaryArray.length), i < len; i++) {
+      if (decimalInput >= binaryArray[i]) {
+        binaryNumber += 1
+        decimalInput = decimalInput - binaryArray[i]
+      } else {
+        binaryNumber += 0
+      }
+    }
+    document.querySelector('#binaryNum').innerHTML = binaryNumber
   } else if (!decimalInput) {
     const querySelect = document.querySelector('#decimalInput')
     querySelect.classList.add('inputError')

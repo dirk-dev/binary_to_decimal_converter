@@ -73,13 +73,17 @@ submitButtonDecimal.onclick = () => {
 
     for (let i = 0; (len = binaryArray.length), i < len; i++) {
       if (decimalInput >= binaryArray[i]) {
+        // adds 1 to a binary digit
         binaryNumber += 1
         decimalInput = decimalInput - binaryArray[i]
       } else {
         binaryNumber += 0
       }
     }
-    document.querySelector('#binaryNum').innerHTML = binaryNumber
+    // regex to add spaces after every 4 digits
+    let binaryNumSpaces = binaryNumber.replace(/(\d{4})/g, '$1 ')
+    // parseInt removes the leading zeros (original result was a string)
+    document.querySelector('#binaryNum').innerHTML = binaryNumSpaces
   } else if (!decimalInput) {
     const querySelect = document.querySelector('#decimalInput')
     querySelect.classList.add('inputError')

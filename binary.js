@@ -1,10 +1,18 @@
 const submitButtonBinary = document.querySelector('#binarySubmit')
 const submitButtonDecimal = document.querySelector('#decimalSubmit')
 
-let inputMessage = document.querySelector('#binaryInput')
-inputMessage.onfocus = () => {
-  inputMessage.value = ''
+// function to clear error message from input box
+let clearErrorMsg = querySelect => {
+  let inputMessage = document.querySelector(querySelect)
+  inputMessage.onfocus = () => {
+    document.querySelector(querySelect).classList.remove('inputError')
+
+    inputMessage.value = ''
+  }
 }
+
+clearErrorMsg('#binaryInput')
+clearErrorMsg('#decimalInput')
 
 submitButtonBinary.onclick = () => {
   event.preventDefault()
@@ -25,8 +33,10 @@ submitButtonBinary.onclick = () => {
     }
     document.querySelector('#decimalNum').innerHTML = decimalNumber
   } else if (!binaryInput) {
+    document.querySelector('#binaryInput').classList.add('inputError')
     document.querySelector('#binaryInput').value = 'Please enter a number.'
   } else {
+    document.querySelector('#binaryInput').classList.add('inputError')
     document.querySelector('#binaryInput').value = 'Binary digits only.'
   }
 }
@@ -37,8 +47,10 @@ submitButtonDecimal.onclick = () => {
   const decimalRegex = /^[0-9]{1,}$/
   if (decimalRegex.test(decimalInput)) {
   } else if (!decimalInput) {
-    alert('The input is empty. Please enter a decimal number.')
+    document.querySelector('#decimalInput').classList.add('inputError')
+    document.querySelector('#decimalInput').value = 'Please enter a number.'
   } else {
-    alert('Please enter decimal digits only (0-9).')
+    document.querySelector('#decimalInput').classList.add('inputError')
+    document.querySelector('#decimalInput').value = 'Please enter digits only.'
   }
 }

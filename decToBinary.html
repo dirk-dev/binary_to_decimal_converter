@@ -12,28 +12,29 @@
         crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gugi|Oswald" rel="stylesheet">
-    <title>Binary to Decimal converter</title>
+    <title>Decimal to Binary converter</title>
 </head>
 
 <body>
-    <div class="card" style="width: 35rem;">
-        <h1>Binary to Decimal converter</h1>
+    <div class="card" id="binary-card" style="width: 35rem;">
+        <h1>Decimal to Binary converter</h1>
         <hr>
-        <h5>Please enter a binary number (0/1s only)</h5>
+        <h5>Please enter a decimal number</h5>
         <h6>Up to 16 digits</h6>
         <br>
-        Binary number:
-        <form> <input type="text" id="binaryInput" maxlength='16' required><br><input type="submit"
-                value="Submit" id="binarySubmit" class="btn btn-primary"></form>
         Decimal number:
-        <div id="decimalNum"></div>
+        <form> <input type="text" id="decimalInput" maxlength='16' required><br><input type="submit"
+                value="Submit" id="decimalSubmit" class="btn btn-primary"></form>
+        Binary number:
+        <div id="binaryNum"></div>
         <br>
-        <button onclick="window.location.href='decToBinary.html';"></a>Decimal to Binary
+        <button onclick="window.location.href='index.html';"></a>Binary to Decimal
             converter</button>
+
     </div>
 
 
-    <script src="./javascript/binaryToDecimal.js"></script>
+    <script src="./javascript/decimalToBinary.js"></script>
 </body>
 
 </html>

@@ -4,17 +4,35 @@
 }
 
 .card {
-    padding:25px;
-    margin: 15px;
-    background-color: rgb(227, 245, 245);
+    padding:1rem;
+    margin: 1rem;
+    background-color: rgb(227, 245, 245); 
 }
 
 #binary-card {
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(116, 212, 236); 
 }
 
+/* #binary-card::before {
+    background-image: url("images/binary-86218_1920.jpg");
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.4;
+} */
+
 input {
-    margin: .15em 0 0 0;
+    margin: .15rem 0 0 0;
+}
+
+img {
+    opacity: 0.5;
 }
 
 h1 {
@@ -22,21 +40,37 @@ h1 {
 }
 
 h5, h6 {
-    font-size: 1.5em;
-    /* margin: 0; */
+    font-size: 1.5rem;
+    color: white;
 }
 
+hr { 
+    height: 30px; 
+    border-style: solid; 
+    border-color: #8c8b8b; 
+    border-width: 1px 0 0 0; 
+    border-radius: 20px; 
+  } 
+  hr:before { 
+    display: block; 
+    content: ""; 
+    height: 30px; 
+    margin-top: -31px; 
+    border-style: solid; 
+    border-color: #8c8b8b; 
+    border-width: 0 0 1px 0; 
+    border-radius: 20px; 
+  }
+
 form, #decimalNum, #binaryNum {
-    font-size: 1.7em;
+    font-size: 1.7rem;
     padding: 0 0.25rem;
     margin: .15em 0 0 0;
 }
 
-
-
 #binarySubmit, #decimalSubmit {
-    width: 150px;
-    margin: 25px 0;
+    width: 6rem;
+    margin: 1.5rem 0;
 }
 
 #decimalSubmit {
@@ -50,10 +84,19 @@ form, #decimalNum, #binaryNum {
 }
 
 #decimalNum, #binaryNum {
-height: 54px;
 border-style: solid;
 border-width: 1px;
 background-color: white;
+}
+
+#decimalNum {
+    height: 2.625rem;
+    width: 15rem;
+}
+
+#binaryNum {
+    height: 5.5rem;
+    width: 25rem;
 }
 
 .inputError {
@@ -61,4 +104,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 color: red;
 font-weight: bold;
 background-color: rgb(245, 229, 229);
+}
+
+button {
+    font-size: 1.25rem;
 }

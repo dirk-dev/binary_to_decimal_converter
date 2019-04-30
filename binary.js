@@ -71,15 +71,29 @@ submitButtonDecimal.onclick = () => {
     ]
     let binaryNumber = ''
 
+    // test code to dynamically generate array
+
+    const binaryValueArray = []
+    let arraySeed = 1
+    while (arraySeed <= decimalInput) {
+      console.log(binaryValueArray)
+
+      binaryValueArray.unshift(arraySeed)
+      arraySeed = arraySeed * 2
+    }
+    console.log(binaryValueArray)
+
+    /// //////////////////////
     for (let i = 0; (len = binaryArray.length), i < len; i++) {
       if (decimalInput >= binaryArray[i]) {
-        // adds 1 to a binary digit
+        // adds 1 to binary digit
         binaryNumber += 1
         decimalInput = decimalInput - binaryArray[i]
       } else {
         binaryNumber += 0
       }
     }
+
     // regex to add spaces after every 4 digits
     let binaryNumSpaces = binaryNumber.replace(/(\d{4})/g, '$1 ')
     // parseInt removes the leading zeros (original result was a string)

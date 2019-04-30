@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 }
 
 .card {
@@ -12,6 +13,27 @@
     background-color: lightgoldenrodyellow;
 }
 
+input {
+    margin: .15em 0 0 0;
+}
+
+h1 {
+    font-family: 'Gugi', cursive;
+}
+
+h5, h6 {
+    font-size: 1.5em;
+    /* margin: 0; */
+}
+
+form, #decimalNum, #binaryNum {
+    font-size: 1.7em;
+    padding: 0 0.25rem;
+    margin: .15em 0 0 0;
+}
+
+
+
 #binarySubmit, #decimalSubmit {
     width: 150px;
     margin: 25px 0;
@@ -22,17 +44,16 @@
     border: rgb(148, 108, 24);
 }
 
+
 #decimalSubmit:hover {
     background-color:darkgoldenrod;
 }
 
 #decimalNum, #binaryNum {
-width: 178px;
-height: 30px;
+height: 54px;
 border-style: solid;
 border-width: 1px;
 background-color: white;
-padding: 0 2px;
 }
 
 .inputError {

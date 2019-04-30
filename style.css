@@ -7,25 +7,12 @@
     padding:1rem;
     margin: 1rem;
     background-color: rgb(227, 245, 245); 
+    background-image: url("images/binary-86218_1920_light.jpg");
 }
 
 #binary-card {
     background-color: rgb(116, 212, 236); 
 }
-
-/* #binary-card::before {
-    background-image: url("images/binary-86218_1920.jpg");
-    background-size: cover;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    opacity: 0.4;
-} */
 
 input {
     margin: .15rem 0 0 0;
@@ -41,7 +28,6 @@ h1 {
 
 h5, h6 {
     font-size: 1.5rem;
-    color: white;
 }
 
 hr { 
@@ -71,16 +57,6 @@ form, #decimalNum, #binaryNum {
 #binarySubmit, #decimalSubmit {
     width: 6rem;
     margin: 1.5rem 0;
-}
-
-#decimalSubmit {
-    background-color: rgb(141, 108, 24);
-    border: rgb(148, 108, 24);
-}
-
-
-#decimalSubmit:hover {
-    background-color:darkgoldenrod;
 }
 
 #decimalNum, #binaryNum {
